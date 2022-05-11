@@ -43,7 +43,7 @@ const getBreeds = async () => {
 };
 
 router.get("/", async (req, res) => {
-  const { name } = req.query;
+  const { name } = req.query;   //QUERY = URL
   const allBreeds = await getBreeds();
 
   if (!name) {
@@ -61,7 +61,7 @@ router.get("/", async (req, res) => {
 });
    
 router.get("/:id", async (req, res) => {
-  const id = req.params.id;
+  const id = req.params.id; //ENTRA POR PARAMS
   const breeds = await getBreeds();
   if (id) {
     const filtrados = await breeds.filter((e) => e.id == id);
