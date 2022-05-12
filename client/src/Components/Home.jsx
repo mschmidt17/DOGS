@@ -6,6 +6,7 @@ import Card from "./Card.jsx";
 import Paginado from "./Paginado.jsx";
 import Loading from "./Loading.jsx";
 import NavBar from "./Navbar.jsx";
+import "../CSS/Home.css";
 
 export default function Home() {
   const dispatch = useDispatch(); //para despachar mis acciones

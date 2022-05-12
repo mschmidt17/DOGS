@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { getDetail, resState } from "../Actions";
+import { getDetail, resState } from "../Actions/index.js";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import Loading from "./Loading";
+import Loading from "./Loading.jsx";
 
 
 

@@ -1,4 +1,5 @@
 import React from "react";
+import "../CSS/Card.css"
 
 
 export default function  Card({image, name, temperament, weight}){

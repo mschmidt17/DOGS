@@ -1,0 +1,93 @@
+.titleForm{
+    display:flex;
+    justify-content: center;
+    color: #060708;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;     
+    align-items: center;
+}
+.title5{
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    color: #3e70cc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(255, 255, 255, 0.671);
+    font-weight:200px;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+   justify-content: center;
+    border-radius: 15%;
+    margin-top: 5%;
+    
+}
+input{
+    border-radius: 5%;
+    margin-top: 2%;
+    
+}
+.boton5{
+    width: 200px;
+    color:rgb(250, 250, 253);
+    background-color: #93c2e1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 25%;
+    height:40px;
+    border-style: groove;
+    border-color: #060708;
+    border-width: 4px;
+}
+    
+.boton5:hover{
+    background-color: #549df0; 
+}
+
+
+ .fromPerfil{
+     display:flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     margin-left:10%;
+ }
+ input{
+     width: 400px;
+     height: 25px;
+     font-size: 20px;
+     justify-content:center;
+     border-radius:8px;
+     text-align:center;
+ }
+
+
+ .concatFiltro{
+     display:flex;
+     flex-direction: column;
+     
+     
+ }
+ .boton3{
+    color:rgb(250, 250, 253);
+    background-color: #93e199;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px;    
+
+}
+    
+.boton3:hover{
+    background-color: #549df0; 
+}
+strong {
+    color: rgb(236, 52, 52);
+    justify-content:center;
+}

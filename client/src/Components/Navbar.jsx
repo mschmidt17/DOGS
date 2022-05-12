@@ -1,8 +1,8 @@
 import React from 'react';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getDogs, sortWeight, sortName, filterExistingBreed, filterTemperament, getTemperaments} from '../Actions';
-import Search from './Search';
+import {getDogs, sortWeight, sortName, filterExistingBreed, filterTemperament, getTemperaments} from '../Actions/index.js';
+import Search from './Search.jsx';
 
 export default function NavBar(){
     const dispatch = useDispatch()

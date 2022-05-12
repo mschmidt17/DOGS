@@ -1,0 +1,67 @@
+.base3{
+    font-size: 20px ;
+    margin: 5px;
+}
+.paginado{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.paginado2{
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.titleHome{
+    margin-left: 5%;
+    color:rgb(168, 18, 118);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: inset;
+    border-color: aliceblue;
+    background: rgb(187, 22, 22);
+    font-size: 50px;
+
+} 
+
+#botonCreate{
+    font-size: 25px;
+    color: black;
+    border-radius: 15px;
+    background-color:rgba(74, 138, 197, 0.986);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 5px 5px 10px 10px #d1e5f8;
+    margin-top: 60px;
+    margin-left: 40px;
+    
+  
+}
+#botonCreate:hover{
+    background-color: #135097; 
+}
+#home{
+    width: 45px;
+    height: 45px;
+}
+#home:hover{
+  background-color: #4e4997;
+    cursor: pointer;
+    border-radius:25%;
+}
+.principal{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header{
+ background-color: rgba(169, 214, 84, 0.199);
+ padding-bottom: 1%;
+}
+.ubboton{
+    display: flex;
+    justify-content: end;
+    margin-right: 8%;
+}

@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTemperaments, resState, postDogs } from "../Actions/index.js";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-
-
+import "../CSS/NewDog.css";
+import { validation } from "./Error.jsx";
 
 
 export default function DogCreate() {
@@ -23,7 +23,7 @@ export default function DogCreate() {
     temperament: [],
     createdInBd: false,
   });
-  const [errors] = useState({});
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     dispatch(getTemperaments());
@@ -53,19 +53,19 @@ export default function DogCreate() {
         temperament: [],
         createdInBd: true,
       });
-      alert('Dog Create!!')
+      alert('New Dog!!')
   }
   function handelChange(e) {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
     });
-   // setErrors(
-    //  validation({
-    //  ...input,
-    //   [e.target.name]: e.target.value,
-    //  })
-   // )
+    setErrors(
+      validation({
+        ...input,
+          [e.target.name]: e.target.value,
+      })
+    )
   }
 
   function handleSelectTemperament(e) {
@@ -98,7 +98,7 @@ export default function DogCreate() {
               Home
             </button>
           </Link>
-          <h1 className="titleForm">Create Dog</h1>
+          <h1 className="titleForm"> Create Dog</h1>
         </div>
         <div className="">
           <form className="fromPerfil" onSubmit={resState}>
@@ -204,7 +204,7 @@ export default function DogCreate() {
                 className="boton5"
                 type="submit"
                 onClick={(e) => handleSubmit(e)}
-              > Create new Dog
+              > Create Dog
               </button>
 
             </div>
@@ -212,7 +212,7 @@ export default function DogCreate() {
         </div>
       </div>
       <div className="imgperfil">
-        <img src="https://cdn.shopify.com/s/files/1/1956/7269/products/Boxer-dog-Art-Print_grande.jpg?v=1589294200" alt="perfil" />
+        <img src="https://i1.wp.com/www.perrosexoticos.com/wp-content/uploads/2021/07/Border-collie-perro-exotico.jpg?fit=832%2C467&ssl=1" alt="perfil" />
       </div>
     </div>
   );
