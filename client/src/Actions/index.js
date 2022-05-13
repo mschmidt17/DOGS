@@ -35,7 +35,7 @@ export function getName(name){
     }
 }
 
- export function getDetail(id){
+export function getDetail(id){
     return async function(dispatch){
         const json = await axios.get('http://localhost:3001/dogs/'+id)
         return dispatch({
@@ -45,14 +45,13 @@ export function getName(name){
     }
 }  
 
-
-
 export function sortName(payload){
     return {
         type:"SORT_NAME",
         payload,
     }
 }
+
 export function filterTemperament(payload){
     return {
         type:"FILTER_TEMPERAMENT",

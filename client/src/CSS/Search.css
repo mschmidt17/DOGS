@@ -1,21 +1,23 @@
+.search{
+    display:flex;
+    justify-content:center;
+    width: 400px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
 .buscador{
-    background-color: rgba(220, 228, 250, 0.918);
+    background-color: rgba(203, 210, 230, 0.918);
     font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    align-items: center;
     border: 1px solid #e1ecf7;
-    margin-right: 100px;
 }
 .buscador:hover{
     background-color: #e4eaf5;
     border: 1px solid #e1ecf7;
+    cursor: pointer;
 }
-.search{
-    display:flex;
-    justify-content:flex-end;
-    margin-left: 60px;
-}
-.figurabuscador{
-    padding: 3%;
-}
+
+
+
 

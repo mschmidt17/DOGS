@@ -5,6 +5,7 @@ import { getDetail, resState } from "../Actions/index.js";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Loading from "./Loading.jsx";
+import "../CSS/Detail.css"
 
 
 

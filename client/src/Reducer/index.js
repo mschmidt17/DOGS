@@ -44,7 +44,7 @@ function rootReducer(state= inicialState, action){
                 ...state,
                 dogs: [...state.dogs].sort((a, b) => (a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1)),
 
-                }
+            }
                
         case 'FILTER_TEMPERAMENT':
             const allBreeds = state.allDogs;
@@ -53,13 +53,14 @@ function rootReducer(state= inicialState, action){
                     if( e.temperament.includes(action.payload)){
                         return e
                     }
-            }
-            return false;
+                }
+                return false;
             })
             return{
                 ...state,
                 dogs: filterTemperament,
             }
+
         case "FILTER_EXISTING_BREED":
             
             if(action.payload === "todo"){

@@ -1,28 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,300;1,700&display=swap');
+
+
+.justificado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .title{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     border-color: aliceblue;
-    margin-left: 100px;
-    margin-top: 300px;
     font-weight: bolder;
     font-size: 200px;
-
+    margin-top: 160px;
+    font-family:'Permanent Marker', cursive;
 } 
-.justificado{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
+
 
 .boton{
     font-weight: bolder;
     font-size: larger;
-    margin-left: 500px;
-    
+    margin-left: 400px;
+    width: 150px;
+    height: 50px;   
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px 10px #93bee1;
 }
 
+.boton:hover{
+    background-color: #3a92bb;
+    cursor: pointer;
+    color: white;
+      
+}
 
 
 

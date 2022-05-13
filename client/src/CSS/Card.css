@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Permanent+Marker&family=Poppins:ital,wght@0,300;1,700&display=swap');
+
+
 .card {
     width: 350px;
     border-radius: 10%;
@@ -8,7 +11,7 @@
     text-align: center;
 }
 .card:hover{
-    background-color: #e1ecf7;
+    background-color: #d7dfe9;
     text-transform: capitalize;
     width: 360px;
     
@@ -16,7 +19,7 @@
    
 .title2{
     color:rgb(151, 16, 151);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     background: white;
     bottom: 10%;
     top: 20%;
@@ -24,7 +27,7 @@
 } 
 .title3{
     color: #71a5de;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     bottom: 10%;
     top: 20%; 
     border-radius: 10%;
@@ -33,12 +36,11 @@
 }
 .title4{
     color:#90e0ef;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-   margin-left: 200px;
-   margin-top: 300px;
-   justify-content: end;
-  
-    
+    font-family: 'Kanit', sans-serif;
+    margin-left: 200px;
+    margin-top: 300px;
+    justify-content: end;
+
 } 
 .base1{
     

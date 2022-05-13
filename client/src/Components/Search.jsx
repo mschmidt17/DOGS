@@ -15,10 +15,10 @@ export default function Search() {
      e.preventDefault();
       setName(e.target.value);
      
-      if(name.length>1){
-    dispatch(getName(name));
+    if(name.length>1){
+      dispatch(getName(name));
   } else{
-    dispatch(getDogs());
+      dispatch(getDogs());
   }
 }
 
@@ -26,13 +26,13 @@ export default function Search() {
   return (
     <div>
          <div className="search">
-      <input
-        type="text"
-        placeholder='Search Breed...'
-         onChange={(e) => handleInputChange(e)} 
-        className='buscador'
-      /><span className="figurabuscador"> 🔍</span>
-     </div> 
+            <input
+              type="text"
+              placeholder='Search Breed...'
+              onChange={(e) => handleInputChange(e)} 
+              className='buscador'
+            />
+        </div> 
     </div>
   );
 }

@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Permanent+Marker&family=Poppins:ital,wght@0,300;1,700&display=swap');
+
+
 .titleForm{
     display:flex;
     justify-content: center;
     color: #060708;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Permanent Marker', cursive;
     margin-top: 20px;     
     align-items: center;
+    width: 400px;
+    font-weight: bolder;
+    
 }
 .title5{
     font-size: 26px;
     display: flex;
     justify-content: center;
-    color: #3e70cc;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3a92bb;
+    font-family: 'Kanit', sans-serif;
     background-color: rgba(255, 255, 255, 0.671);
     font-weight:200px;
 
@@ -20,7 +27,7 @@
     display: flex;
     flex-direction: column;
     width: 20%;
-   justify-content: center;
+    justify-content: center;
     border-radius: 15%;
     margin-top: 5%;
     
@@ -32,9 +39,9 @@ input{
 }
 .boton5{
     width: 200px;
-    color:rgb(250, 250, 253);
-    background-color: #93c2e1;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    background-color:rgba(74, 138, 197, 0.986);
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     border-radius: 10px;
     font-size: 20px;
@@ -43,11 +50,13 @@ input{
     height:40px;
     border-style: groove;
     border-color: #060708;
-    border-width: 4px;
+    border-width: 2px;
+  
 }
+
     
 .boton5:hover{
-    background-color: #549df0; 
+    background-color: #2c67ac;
 }
 
 
@@ -74,9 +83,9 @@ input{
      
  }
  .boton3{
-    color:rgb(250, 250, 253);
-    background-color: #93e199;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:black;
+    background-color: white;
+    font-family: 'Kanit', sans-serif;
     cursor: pointer;
     border-radius: 10px;
     font-size: 20px;
@@ -90,4 +99,9 @@ input{
 strong {
     color: rgb(236, 52, 52);
     justify-content:center;
+}
+.imgperfil{
+    margin: 10%;
+    border-image: stretch;
+    
 }

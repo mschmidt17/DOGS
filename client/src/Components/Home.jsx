@@ -71,12 +71,12 @@ export default function Home() {
         
         <div >
           <Link to="/dog">
-            <button id="botonCreate">Create Dogs</button>
+            <button id="botonCreate">Create Dog</button>
           </Link>
         </div>
-        <div className="principal">
-          <NavBar />
-        </div>
+
+        <NavBar />
+
         <div>
           {dogs.length > 0 ? mostrarCards(dogs) : mostrarCards(allDogs)}
         </div>

@@ -170,17 +170,13 @@ export default function DogCreate() {
                 onChange={(e) => handelChange(e)}
               ></input>
 
-              <label className="title5" value="temperament" name="temperament">
-                {" "}
-                Temperament:{" "}
-              </label>
+              
               <select
                 className="boton5"
                 onChange={(e) => handleSelectTemperament(e)}
               >
                 <option>Temperaments</option>
-                {allTemperaments &&
-                  allTemperaments.map((e) => (
+                {allTemperaments && allTemperaments.map((e) => (
                     <option key={e.id} value={e.name}>
                       {e.name}
                     </option>

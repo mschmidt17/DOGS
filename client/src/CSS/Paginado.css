@@ -1,17 +1,17 @@
 .botonPaginado{
-    color:rgb(22, 22, 24);
-    background-color: rgba (220, 228, 250, 0.918);
+    color: black;
+    font-weight: bold;
+    background-color: rgba(220, 228, 250, 0.918);
     font-family:  inherit;
     cursor: pointer;
     border-radius: 15%;
-    width: 35px;
-    margin: 1%;
-    display: flex;
+    width: 30px;
+    display: inline-flex;
     flex-direction: row;
    
 }
 .botonPaginado:hover{
-    background-color: rgba(74, 138, 197, 0.986); 
+    background-color: #2c67ac; 
     height: 110%;
 }
 .paginado9{
@@ -19,5 +19,4 @@
     direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
-    }
+}
