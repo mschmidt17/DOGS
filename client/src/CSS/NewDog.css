@@ -51,7 +51,7 @@ input{
     border-style: groove;
     border-color: #060708;
     border-width: 2px;
-  
+    box-shadow: 5px 5px 10px 10px #d1e5f8;
 }
 
     

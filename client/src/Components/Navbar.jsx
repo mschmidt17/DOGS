@@ -32,6 +32,11 @@ export default function NavBar(){
     const handleFilterTemperaments=(e)=>{
         dispatch(filterTemperament(e.target.value))
     }
+    function handleRefresh(e) {
+        window.location.reload();
+    }
+
+    
 
   
     return(
@@ -55,17 +60,18 @@ export default function NavBar(){
 
                 <select className="botonfiltro" 
                     onChange={e=> handlefilterExistingBreed(e)}>
-                        <option value="todo">all Existing Breed</option>
+                        <option value="todo">All Existing Breed</option>
                         <option value="db" >Existing Breed DB</option>
                         <option value="api" >Existing Breed API</option> 
                 </select>
 
                 <select className="botonfiltro" onChange={e=> handleFilterTemperaments(e)}>
-                    <option value="All">all Temperaments</option>
+                    <option value="All">All Temperaments</option>
                     {allTemperaments && allTemperaments.map(e => (
                     <option key={e.id} value={e.name}> {e.name} </option>
                     ))}
                 </select> 
+                <button className='Reset' onClick={(e)=>{handleRefresh(e)}}> Reset </button>
             </div> 
         </div>
     )
