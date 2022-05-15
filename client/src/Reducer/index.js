@@ -74,12 +74,12 @@ function rootReducer(state= inicialState, action){
 
              return { 
                 ...state,
-                 dogs : state.allDogs.filter((breed)=> breed.createdInBd === true),
+                 dogs : state.allDogs.filter((breed)=> breed.createdInDB === true),
                     }
             }else{
                 return { 
                     ...state,
-                     dogs : state.allDogs.filter((breed)=> breed.createdInBd === undefined),
+                     dogs : state.allDogs.filter((breed)=> breed.createdInDB === undefined),
                     }
             }
 

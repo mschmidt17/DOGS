@@ -66,6 +66,7 @@ input{
      justify-content: space-evenly;
      margin-left:10%;
  }
+
  input{
      width: 400px;
      height: 25px;
@@ -102,6 +103,4 @@ strong {
 }
 .imgperfil{
     margin: 10%;
-    border-image: stretch;
-    
 }
