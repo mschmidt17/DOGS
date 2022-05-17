@@ -101,6 +101,10 @@ strong {
     color: rgb(236, 52, 52);
     justify-content:center;
 }
-.imgperfil{
-    margin: 10%;
+.imgperfil {
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 120px 60px 285px 60px;
+    box-shadow: 5px 5px 10px 10px #d1e5f8;
 }
