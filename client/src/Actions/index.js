@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export function getDogs(){
-    return function(dispatch){
+    return function(dispatch){                       //todas las que acciones que hacen pedido a la api y a la BD usan dispatch
         return fetch('http://localhost:3001/dogs')
         .then(res => res.json())
         .then(data =>{
@@ -13,6 +13,8 @@ export function getDogs(){
         })
     }
 }
+
+
 
 export function getTemperaments(){
     return async function (dispatch){

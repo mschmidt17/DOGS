@@ -12,7 +12,7 @@ const { Dog } = require('../db.js');   //Me traigo el modelo de la tabla dog de 
 
 router.post("/", async (req, res, next) => {
     try {
-        const {
+        const {             //Guarda lo q el usuario completo en el formulario
             name,
             height,
             weight,
@@ -21,7 +21,7 @@ router.post("/", async (req, res, next) => {
             image,
         } = req.body;
         
-        const newDog = await Dog.create({
+        const newDog = await Dog.create({    //create es un metodo de sequelize. En el modelo dog de mi base de datos creame un nuevo perro
             name:name,
             height: height,
             weight: weight,

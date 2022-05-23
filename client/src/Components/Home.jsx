@@ -7,6 +7,8 @@ import Paginado from "./Paginado.jsx";
 import Loading from "./Loading.jsx";
 import NavBar from "./Navbar.jsx";
 import "../CSS/Home.css";
+import casa from "../Imagen/Home.png";
+
 
 export default function Home() {
   const dispatch = useDispatch(); //para despachar mis acciones
@@ -69,10 +71,14 @@ export default function Home() {
     <div>
       <div>
         
-        <div >
+        <div className="HeaderHome" >
           <Link to="/dog">
             <button id="botonCreate">Create Dog</button>
           </Link>
+          <Link to = "/">
+            <img src={casa} width="60" height="60" alt='' className='casa'/>
+          </Link>
+                
         </div>
 
         <NavBar />

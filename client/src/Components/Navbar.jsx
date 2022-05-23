@@ -3,7 +3,8 @@ import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getDogs, sortWeight, sortName, filterExistingBreed, filterTemperament, getTemperaments} from '../Actions/index.js';
 import Search from './Search.jsx';
-import "../CSS/NavBar.css"
+import "../CSS/NavBar.css";
+
 
 export default function NavBar(){
     const dispatch = useDispatch()
@@ -43,6 +44,7 @@ export default function NavBar(){
         <div className='containerNav'>
             <div>
                 <Search/>
+
             </div>
             
             <div className='filter'> 

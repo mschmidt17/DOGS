@@ -138,6 +138,7 @@ function rootReducer(state= inicialState, action){
                 }
                 };
                 break;
+                 
         case 'RES_STATE':
             return{
                 ...state,

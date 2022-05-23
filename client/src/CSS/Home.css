@@ -27,8 +27,8 @@
     border-radius: 10px;
     padding: 12px;
     box-shadow: 5px 5px 10px 10px #d1e5f8;
-    margin-top: 60px;
-    margin-left: 40px;
+    margin-top: 70px;
+    margin-left: 100px;
     font-weight: bolder;
   
 }
@@ -48,14 +48,17 @@
     color: aliceblue;
 }
 
-.header{
- background-color: rgba(169, 214, 84, 0.199);
- padding-bottom: 1%;
-}
-.ubboton{
+.HeaderHome{
     display: flex;
-    justify-content: end;
-    margin-right: 8%;
+    flex-direction: row;
 }
+
+.casa{
+    padding: 12px;
+    margin-top: 60px;
+    margin-left: 1090px;
+
+}
+
 
 

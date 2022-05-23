@@ -35,14 +35,14 @@ module.exports = (sequelize) => {
       allowNull: true,
     },
 
-    createdInDB: {
-      type: DataTypes.BOOLEAN,
+    createdInDB: {                  //Le agrego esta propiedad para que los dogs creados se distingan de los de la api. Sirve para filtarlos
+      type: DataTypes.BOOLEAN,      //los dogs creados se guardan en mi base de datos y el resto de los dogs los pido a la API.
       allowNull: false,
       defaultValue: true,
     },
     
     
   },{
-    timestamps: false,
+    timestamps: false,         //Es para que no se creen las columnas de las fechas (creacion-modificacion)
   });
 };

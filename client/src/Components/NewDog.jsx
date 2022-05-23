@@ -11,7 +11,7 @@ export default function DogCreate() {
   const dispatch = useDispatch();
   const  allTemperaments= useSelector((e) => e.temperament);
 
-  const [input, setInput] = useState({
+  const [input, setInput] = useState({ //input es un estado del componente, setinput es la funcion para modificar ese estado
     name: "",
     minHeight: "",
     maxHeight: "",
@@ -214,4 +214,3 @@ export default function DogCreate() {
   );
 }
 
-// 

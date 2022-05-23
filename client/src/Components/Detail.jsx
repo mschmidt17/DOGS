@@ -9,14 +9,14 @@ import "../CSS/Detail.css"
 
 
 
-export default function Detail(){
-    const { id }= useParams();
+export default function Detail(){          //crea un componente funcional detail
+    const { id }= useParams();             //destructuring para traer parametro ID
     const dogDetail = useSelector((e)=>e.detail);
     console.log(dogDetail);
     const dispatch = useDispatch();
 
 
-    useEffect(() => {
+    useEffect(() => {                 //cuando se cree el componente, despacha get detail y res state que son actions
         dispatch(getDetail(id));
         dispatch(resState(resState));
     }, [dispatch, id]);

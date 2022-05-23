@@ -37,8 +37,8 @@ const { Dog, Temperament } = sequelize.models;
 // Product.hasMany(Reviews);
 
 
-Dog.belongsToMany(Temperament, { through: "raza_temperamento" });
-Temperament.belongsToMany(Dog, { through: "raza_temperamento" });
+Dog.belongsToMany(Temperament, { through: "raza_temperamento" });    //belongstomany: peretenece a muchos. trought: a traves de.
+Temperament.belongsToMany(Dog, { through: "raza_temperamento" });    //raza_temperamento es la tabla intermedia.
 
 
 
