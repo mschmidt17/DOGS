@@ -11,8 +11,8 @@ import casa from "../Imagen/Home.png";
 
 
 export default function Home() {
-  const dispatch = useDispatch(); //para despachar mis acciones
-  const allDogs = useSelector((e) => e.allDogs); // poneme en allDogs todo lo que tengo en el state
+  const dispatch = useDispatch(); 
+  const allDogs = useSelector((e) => e.allDogs); 
   const dogs = useSelector((e) => e.dogs);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -37,14 +37,12 @@ export default function Home() {
           ) : (
             currentDogs.map((e) => {
               return (
-                <div>
+                <div key={e.id}>
                   <Link
-                    key={e.id}
                     to={"/dogs/" + e.id}
                     style={{ textDecoration: "inherit" }}
                   >
                     <Card
-                      key={e.id}
                       name={e.name}
                       image={e.image}
                       temperament={e.temperament}
@@ -77,12 +75,10 @@ export default function Home() {
           </Link>
           <Link to = "/">
             <img src={casa} width="60" height="60" alt='' className='casa'/>
-          </Link>
-                
+          </Link>     
         </div>
 
         <NavBar />
-
         <div>
           {dogs.length > 0 ? mostrarCards(dogs) : mostrarCards(allDogs)}
         </div>
