@@ -2,13 +2,12 @@ import axios from 'axios';
 
 
 export function getDogs(){
-    return function(dispatch){                       //todas las que acciones que hacen pedido a la api y a la BD usan dispatch
-        return fetch('http://localhost:3001/dogs')
-        .then(res => res.json())
-        .then(data =>{
+    return function(dispatch){                       
+        axios.get('http://localhost:3001/dogs')
+        .then(dogs =>{
             dispatch({
                 type: 'GET_DOGS',
-                payload: data,
+                payload: dogs.data,
             })
         })
     }
@@ -17,18 +16,19 @@ export function getDogs(){
 
 
 export function getTemperaments(){
-    return async function (dispatch){
-        var json = await axios.get("http://localhost:3001/temperament");
-        return dispatch({
-            type:"GET_TEMPERAMENTS",
-            payload: json.data,
+    return function (dispatch){
+        axios.get("http://localhost:3001/temperament")
+        .then(temp =>{
+            dispatch({
+                type: "GET_TEMPERAMENTS",
+                payload: temp.data,
+            })
         })
     }
 }
 
 export function getName(name){
     return async function (dispatch){
-
         const json = await axios.get('http://localhost:3001/dogs?name='+ name);
         return dispatch({
             type:"GET_NAME",
@@ -47,7 +47,7 @@ export function getDetail(id){
     }
 }  
 
-export function sortName(payload){
+export function sortName(payload){                          //no son asincronas por eso no se necesita promesa ni async await
     return {
         type:"SORT_NAME",
         payload,
