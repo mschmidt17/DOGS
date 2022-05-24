@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export function getDogs(){
     return function(dispatch){                       
-        axios.get('http://localhost:3001/dogs')
+        axios.get('/dogs')
         .then(dogs =>{
             dispatch({
                 type: 'GET_DOGS',
@@ -17,7 +17,7 @@ export function getDogs(){
 
 export function getTemperaments(){
     return function (dispatch){
-        axios.get("http://localhost:3001/temperament")
+        axios.get("/temperament")
         .then(temp =>{
             dispatch({
                 type: "GET_TEMPERAMENTS",
@@ -29,7 +29,7 @@ export function getTemperaments(){
 
 export function getName(name){
     return async function (dispatch){
-        const json = await axios.get('http://localhost:3001/dogs?name='+ name);
+        const json = await axios.get('/dogs?name='+ name);
         return dispatch({
             type:"GET_NAME",
             payload: json.data,
@@ -39,7 +39,7 @@ export function getName(name){
 
 export function getDetail(id){
     return async function(dispatch){
-        const json = await axios.get('http://localhost:3001/dogs/'+id)
+        const json = await axios.get('/dogs/'+id)
         return dispatch({
             type:"GET_DETAIL",
             payload: json.data,
@@ -77,7 +77,7 @@ export function sortWeight(payload){
 
 export function postDogs(payload){
     return async function(){
-        const create= await axios.post('http://localhost:3001/dog',payload);
+        const create= await axios.post('/dog',payload);
         return create;
     }
 }

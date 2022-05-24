@@ -22,7 +22,7 @@ const { conn } = require('./src/db.js');   //tenes los modelos de tu base de dat
 
 // Syncing all the models at once.         //se sincronizan todos los modelos en este puerto. Se conecta el server con la base de datos.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+  server.listen(process.env.PORT, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
