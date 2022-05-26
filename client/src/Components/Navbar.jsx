@@ -9,7 +9,7 @@ import "../CSS/NavBar.css";
 export default function NavBar(){
     const dispatch = useDispatch()
 
-    useEffect(() => {
+    useEffect(() => {                       
         dispatch(getDogs());
     }, [dispatch]);
 
@@ -29,12 +29,12 @@ export default function NavBar(){
         e.preventDefault();
         dispatch(filterExistingBreed(e.target.value))
     }
-    const allTemperaments= useSelector((e)=> e.temperament)
+    const allTemperaments= useSelector((e)=> e.temperament)     //selecciona el estado global temp
     const handleFilterTemperaments=(e)=>{
         dispatch(filterTemperament(e.target.value))
     }
     function handleRefresh(e) {
-        window.location.reload();
+        window.location.reload();                
     }
 
     

@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
+
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('dog', {
@@ -35,8 +34,8 @@ module.exports = (sequelize) => {
       allowNull: true,
     },
 
-    createdInDB: {                  //Le agrego esta propiedad para que los dogs creados se distingan de los de la api. Sirve para filtarlos
-      type: DataTypes.BOOLEAN,      //los dogs creados se guardan en mi base de datos y el resto de los dogs los pido a la API.
+    createdInDB: {                  
+      type: DataTypes.BOOLEAN,      
       allowNull: false,
       defaultValue: true,
     },

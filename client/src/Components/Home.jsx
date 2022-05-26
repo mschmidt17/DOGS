@@ -17,8 +17,8 @@ export default function Home() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const dogsPage = 8;
-  const indexOfLastDogs = currentPage * dogsPage;
-  const indexOfFirstDogs = indexOfLastDogs - dogsPage;
+  const indexOfLastDogs = currentPage * dogsPage;            //currentpage = pagina actual
+  const indexOfFirstDogs = indexOfLastDogs - dogsPage;       
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);

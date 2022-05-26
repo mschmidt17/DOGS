@@ -28,9 +28,10 @@ let sequelize =
     ssl: true,
   })
   : new Sequelize(
-    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`, 
-    { logging: false, native: false,}
-  );
+    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`, {
+      logging: false, 
+      native: false,
+    });
 
 const basename = path.basename(__filename);
 const modelDefiners = [];
@@ -58,7 +59,7 @@ const { Dog, Temperament } = sequelize.models;
 // Product.hasMany(Reviews);
 
 
-Dog.belongsToMany(Temperament, { through: "raza_temperamento" });    //belongstomany: peretenece a muchos. trought: a traves de.
+Dog.belongsToMany(Temperament, { through: "raza_temperamento" });    //belongstomany: peretenece a muchos. through: a traves de.
 Temperament.belongsToMany(Dog, { through: "raza_temperamento" });    //raza_temperamento es la tabla intermedia.
 
 

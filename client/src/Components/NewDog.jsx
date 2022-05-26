@@ -21,7 +21,7 @@ export default function DogCreate() {
     maxlife_span: "",
     image: "",
     temperament: [],
-    createdInBd: false,
+    createdInDB: false,
   });
   const [errors, setErrors] = useState({});
 
@@ -51,7 +51,7 @@ export default function DogCreate() {
         maxlife_span: "",
         image: "",
         temperament: [],
-        createdInBd: true,
+        createdInDB: true,
       });
       alert('New Dog!!')
   }

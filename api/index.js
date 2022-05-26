@@ -17,8 +17,8 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const server = require('./src/app.js');   //todas las rutas de la back 
-const { conn } = require('./src/db.js');   //tenes los modelos de tu base de datos
+const server = require('./src/app.js');   
+const { conn } = require('./src/db.js');   
 
 // Syncing all the models at once.         //se sincronizan todos los modelos en este puerto. Se conecta el server con la base de datos.
 conn.sync({ force: true }).then(() => {

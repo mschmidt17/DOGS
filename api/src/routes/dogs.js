@@ -5,23 +5,22 @@ const { default: axios } = require("axios");
 const router = Router();
 
 const getBd = async () => {
-  return await Dog.findAll({  //es un metodo sequelize que trae la info d ela base de datos del modelo dog.
+  return await Dog.findAll({   //busca todos
     include: {
       model: Temperament,
       attributes: ["name"],
       through: {
-
         attributes: [],
       },
     },
   });
 };
 
-const getApi = async () => {     //Se trae la info de la api
+const getApi = async () => {     
   const apiUrl = await axios.get(
     `https://api.thedogapi.com/v1/breeds?api_key=${YOUR_API_KEY}`
   );
-  const apiInfo = await apiUrl.data.map((e) => {    //se crea un array de objetos que detalla la info que necesito
+  const apiInfo = await apiUrl.data.map((e) => {    
     return {
       id: e.id,
       image: e.image.url,
@@ -35,16 +34,16 @@ const getApi = async () => {     //Se trae la info de la api
   return apiInfo;
 };
 
-const getBreeds = async () => {     //Espera la info de la BD y la api y concatena toda la info y la guarda en una variable
+const getBreeds = async () => {     
   const apiInfo = await getApi();
-  const bdInfo = await getBd();
-  const allInfo = apiInfo.concat(bdInfo);
+  const bdInfo = await getBd();                        
+  const allInfo = apiInfo.concat(bdInfo);      //para traer todos los perros
 
   return allInfo;
 };
 
 router.get("/", async (req, res) => {
-  const { name } = req.query;   //QUERY(name)
+  const { name } = req.query;   
   const allBreeds = await getBreeds();
 
   if (!name) {
@@ -62,12 +61,12 @@ router.get("/", async (req, res) => {
 });
    
 router.get("/:id", async (req, res) => {
-  const id = req.params.id; //ENTRA POR PARAMS(id)
+  const id = req.params.id; 
   const breeds = await getBreeds();
   if (id) {
     const filtrados = await breeds.filter((e) => e.id == id);
     filtrados.length
-      ? res.status(200).json(filtrados) // ternario. si se cumple la condicion se ejecuta esto, sino se ejecuta lo siguiente
+      ? res.status(200).json(filtrados) 
       : res.status(404).send("Raza no encontrada por ID");
   }
 });

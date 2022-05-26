@@ -7,6 +7,7 @@ export function getDogs(){
         .then(dogs =>{
             dispatch({
                 type: 'GET_DOGS',
+                
                 payload: dogs.data,
             })
         })

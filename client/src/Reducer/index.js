@@ -7,7 +7,7 @@ const inicialState = {
 
 function rootReducer(state= inicialState, action){
     
-    switch(action.type){
+    switch(action.type){                 //va comparando hasta que encuentra la action type que despacha conmponente
         case 'GET_DOGS':
             return{
                 ...state,
