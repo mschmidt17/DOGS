@@ -16,6 +16,7 @@ Javascript | React | Redux | CSS | Node | Express | Sequelize | PostgreSQL
 
 
 <p align="left">
+  <br> </br>
   <img height="400" src="./PI.1.png"/>
   <br> </br>
   <img height="400" src="./PI.2.png"/>
